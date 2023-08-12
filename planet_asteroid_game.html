@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"> <!--Specifying the lang as english for search engine optimization (Doesn't effects the web page)-->
+
+<head>
+    <meta charset="UTF-8" /> <!--Character encoding of the webpage. UTF->Unicode Transformation Format - 8-Bit -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--Viewport settings-->
+    <!--width=device-width: This part sets the width of the viewport to be equal to the device's width in pixels. It means that the content of the web page will adjust to fit the screen width of the device, making it responsive.-->
+    <!--initial-scale=1.0: This part sets the initial scale of the viewport to 1.0. This means that the content is displayed at its original size when the page is first loaded. Users can still zoom in and out using gestures, but the initial zoom level is set to the default.-->
+
+    <title>Galactic Wide Web</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+    <!--Loading the phaser game framework library from a content delivery network-->
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="module">
+        // Importing scene classes from external files
+        import TitleScene from './titleScene.js';
+        import GameScene from './gameScene.js'; 
+        import EndScene from './endScene.js';
+
+        // Creating instances of the imported scene classes
+        var gameScene = new GameScene();
+        var titleScene = new TitleScene();
+        var endScene = new EndScene();
+
+        // Phaser configuration for the objects in game
+        var config = {
+            type: Phaser.AUTO, //Chooses WebGL or Canvas based on browser support
+            width: 1300,
+            height: 700,
+            physics: {
+                default: "arcade",  // provides a simple and efficient way to handle 2D physics interactions commonly found in games
+                arcade: {
+                    gravity: {
+                        y: 0, // no vertical gravity applied to objects
+                    },
+                    debug: false,// if we set it as true then we will be able to see the collision boundaries and other physics related data. It is basically used for debugging the errors, if present in the game by visualizing the collision boundaries and other properties.
+                    // the debug property in the physics configuration allows developers to control whether they see visual debug information in the game scene. It's a tool that helps during development to understand how physics interactions are functioning, but it's typically turned off when you're ready to present your game to players without the distraction of debug visuals.
+                },
+            }
+        };
+
+        // Creating a new Phaser Game instance with the configuration
+        var game = new Phaser.Game(config);
+
+        // Adding scenes to the game
+        game.scene.add('titleScene', titleScene);
+        game.scene.add("gameScene", gameScene);
+        game.scene.add('endScene', endScene);
+
+        // Starting the title scene initially
+        game.scene.start('titleScene');
+
+    </script>
+</body>
+
+</html>
