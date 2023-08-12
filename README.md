@@ -14,7 +14,8 @@ Phaser - It is a 2D game framework used for making HTML5 games that can be used 
 The game has a total of 3 visible scenes : title scene, game scene and end game scene
 
 ### Title Scene:
-![image 1](/assets/readme/titleScene.png)
+
+<img src="/assets/readme/titleScene.png" width="600px" height="350px">
 
 ### Game Scene:
 The scene consists of :-
@@ -32,12 +33,14 @@ v)   A text that shows number of points gained
 vi) Planets
 
 Every time the player sprite crashes into a planet, a life is lost and an extra planet is generated. The objective of the game is to shoot all the asteroids, avoiding the planets. However, if the player loses all the 5 lives before this is achieved, the game is over.
-![image 2](/assets/readme/gameScene.png)
+
+<img src="/assets/readme/gameScene.png" width="600px" height="350px">
 
 ### End Scene:
 
 This is the final scene that the user sees. This scene consists of the moving space background, a game over text, the player’s final score and two buttons:- (i) a replay button which on clicking would take the user back to a fresh start of the game, and (ii) a home button which on clicking would take the user to the title scene.
-![image 3](/assets/readme/endScene.png)
+
+<img src="/assets/readme/endScene.png" width="600px" height="350px">
 
 ## Controls
 
