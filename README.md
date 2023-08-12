@@ -67,3 +67,15 @@ iii)Game levels of varying difficulties (Easy, Medium and Hard)
 iv) Backend programming to store user scores and establish a basic scoreboard using Django.
 
 v)  A help scene to go over how to play the game
+
+## Installation
+
+### Install XAMPP
+XAMPP makes it easy to set up a local server environment by providing all the necessary components (including Apache, MySQL or MariaDB for database management, PHP for scripting, and more) in a single package. This is particularly useful for developers who want to create and test websites without the need to upload them to a remote server every time they make changes. It's widely used for web development and testing purposes.
+
+Link: https://www.apachefriends.org/
+
+### Run XAMPP and Start Apache
+Apache HTTP Server, often just called Apache, is responsible for serving web pages and content to your web browser when you're developing and testing websites locally on your computer.
+
+In XAMPP, Apache is configured to work within the local environment and is used to host and manage your websites and web applications during the development process. It allows you to simulate the hosting environment on your own computer before deploying your websites to a live server.
